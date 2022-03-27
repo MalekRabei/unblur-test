@@ -1,0 +1,56 @@
+<div>
+  <mat-grid-list cols="2">
+    <span>Filter by date</span>
+    <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+      <mat-icon class="close-icon" color="warn">close</mat-icon>
+    </button>
+
+    <mat-grid-tile>
+      <div [ngClass]="[inputStyle]">
+        <label [hidden]="hide"> From </label>
+        <input
+          class="date-range-input"
+          placeholder="dd/mm/yyyy"
+          (mousedown)="onClickInput()"
+          value="{{ selectedDateRange?.start | date: 'shortDate' }}"
+          name="start"
+        />
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div [ngClass]="[inputStyle2]">
+        <label [hidden]="hide2"> To</label>
+        <input
+          class="date-range-input"
+          placeholder="dd/mm/yyyy"
+          (mousedown)="onClickInput2()"
+          value="{{ selectedDateRange?.end | date: 'shortDate' }}"
+          name="end"
+        />
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-card>
+    <mat-calendar
+      class="month-calendar"
+      (selectedChange)="_onSelectedChange($event)"
+      [selected]="selectedDateRange"
+    ></mat-calendar>
+  </mat-card>
+
+  <button
+    mat-icon-button
+    class="close-button btn-style"
+    (click)="onClickClear()"
+  >
+    Clear
+  </button>
+  <button
+    mat-icon-button
+    class="close-button btn-style"
+    (click)="onClickApply()"
+  >
+    Apply
+  </button>
+</div>

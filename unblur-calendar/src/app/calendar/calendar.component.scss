@@ -1,0 +1,122 @@
+.sw-AppContainer,
+.sw-PartialAppContainer {
+  .sw-CalendarLayout {
+    flex: 1 0 calc(50% - 2px);
+    max-width: calc(50% - 2px);
+
+    &.sw-ChannelsBannerLayout--fullWidth {
+      flex-basis: 100%;
+      max-width: 100%;
+
+      &:nth-of-type(2n) {
+        margin-left: 0px;
+      }
+      &:nth-of-type(n) {
+        margin-bottom: 1px;
+        margin-top: 0px;
+      }
+    }
+
+    .fake-push-button {
+      height: 60px;
+      border-radius: 50%;
+      width: 60px;
+      background-color: #034ea1;
+      cursor: pointer;
+      margin: auto 0;
+      &.fake-push-button--active {
+        background: white;
+      }
+    }
+  }
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #0dbff9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+input:disabled {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #0dbff9;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.315);
+  color: #061c2a;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #0dbff9;
+  color: white;
+  font-weight: bold;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1976d2;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #061c2a;
+  padding: 20px;
+}
+label {
+  color: #fff;
+}
+
+::ng-deep .mat-button-wrapper {
+  color: #fff;
+}
+h1 {
+  color: #061c2a;
+  margin-left: 90px;
+}
+.choose-date-input {
+  background: #051c2a;
+  color: #0dbff9;
+  border: 0;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+#bookings {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#bookings td,
+#bookings th {
+  border: 0px solid #ddd;
+  padding: 8px;
+  color: #fff;
+}
+
+#bookings tr:nth-child(even) {
+  background-color: #0dbef993;
+}
+
+#bookings tr:hover {
+  background-color: rgba(221, 221, 221, 0.774);
+}
+
+#bookings th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #fff;
+  color: black;
+}

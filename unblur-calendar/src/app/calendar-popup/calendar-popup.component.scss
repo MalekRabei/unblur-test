@@ -1,0 +1,122 @@
+::ng-deep .mat-calendar-body-selected {
+  background-color: #0dbff9 !important;
+  color: #fff;
+}
+::ng-deep .mat-calendar-body-label {
+  color: transparent;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+::ng-deep .mat-calendar-body-in-range::before {
+  background: #0dbff94d;
+}
+::ng-deep .mat-calendar-table-header th {
+  color: #0dbff9;
+  font-weight: bold;
+}
+
+::ng-deep .mat-calendar-table-header-divider::after {
+  display: none;
+}
+@media (hover: hover) {
+  ::ng-deep
+    .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+    > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: #0dbff9a1;
+  }
+}
+
+::ng-deep .mat-dialog-container {
+  background: #051c2a;
+}
+
+::ng-deep .mat-body,
+.mat-body-1,
+.mat-typography {
+  font: 400 14px/20px Roboto, "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
+}
+::ng-deep .mat-card {
+  background: #051c2a;
+
+  margin-top: -40px;
+}
+.date-range-input {
+  background-color: transparent;
+  border-bottom: 1px solid #0dbff9;
+  border-top: 0px solid;
+  border-left: 0px;
+  border-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 20px;
+  color: #fff;
+  width: 80%;
+}
+
+.close-button {
+  float: right;
+  top: -24px;
+  right: -24px;
+}
+
+.close-icon {
+  //transition: 1s ease-in-out;
+  color: #fff;
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+
+::ng-deep .icon-outside .mat-dialog-container {
+  overflow: unset;
+}
+
+.form-group {
+  width: 100%;
+}
+.form-group > label {
+  position: absolute;
+  margin-top: -5px;
+  margin-left: 20px;
+  background-color: #051c2a;
+  color: #0dbff9;
+  padding: 3px;
+}
+
+.form-group > input {
+  background-color: transparent;
+  border: 1px solid #0dbff9;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+  color: #fff;
+  width: 80%;
+}
+
+.form-group1 {
+  width: 100%;
+}
+
+.form-group1 > input {
+  background-color: transparent;
+  border-bottom: 1px solid #0dbff9;
+  border-top: 0px solid;
+  border-left: 0px;
+  border-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 20px;
+  color: #fff;
+  width: 80%;
+}
+::ng-deep .mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
+
+.btn-style {
+  margin-top: 30px;
+  margin-right: 32px;
+}

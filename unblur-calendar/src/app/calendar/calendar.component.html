@@ -1,0 +1,94 @@
+<section class="sw-CalendarLayout" *ngIf="showForm">
+  <h1>Hotel Reservation</h1>
+
+  <div class="example-button-row">
+    <form [formGroup]="bookingForm" (ngSubmit)="onSaveReservation()">
+      <div>
+        <label> Fullname </label>
+        <input
+          class=""
+          type="text"
+          placeholder="Fullname"
+          formControlName="fullName"
+          name="fullName"
+          [(ngModel)]="fullName"
+        />
+      </div>
+      <div>
+        <label> Phone number </label>
+        <input
+          class=""
+          type="number"
+          placeholder="Phone Number"
+          formControlName="phoneNumber"
+          name="phoneNumber"
+          [(ngModel)]="phoneNumber"
+        />
+      </div>
+      <div>
+        <label> Hotel Name </label>
+        <input
+          class=""
+          type="text"
+          placeholder="Hotel Name"
+          formControlName="hotelName"
+          name="hotelName"
+          [(ngModel)]="hotelName"
+        />
+      </div>
+      <div>
+        <label> Room type </label>
+        <select
+          name="roomType"
+          formControlName="roomType"
+          [(ngModel)]="roomType"
+        >
+          <option value="">--Please choose an option--</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="triple">Triple</option>
+          <option value="quad">Quad</option>
+        </select>
+      </div>
+
+      <div>
+        <label> Duration </label>
+        <input
+          class="choose-date-input"
+          (click)="openDialog()"
+          value="choose the dates"
+        />
+      </div>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</section>
+<br />
+<section class="sw-CalendarLayout" *ngIf="showList">
+  <h1>List Reservation</h1>
+
+  <div class="example-button-row">
+    <table id="bookings">
+      <tr>
+        <th>Fullname</th>
+        <th>Phone Number</th>
+        <th>Hotel Name</th>
+        <th>Room Type</th>
+        <th>Duration</th>
+        <th>Booking State</th>
+      </tr>
+      <tr *ngFor="let booking of bookingList; let i = index">
+        <td>{{ booking.fullName }}</td>
+        <td>{{ booking.phoneNumber }}</td>
+        <td>{{ booking.hotelName }}</td>
+        <td>{{ booking.roomType }}</td>
+        <td>{{ booking.bookingState ? "Reserved" : "Pending" }}</td>
+        <td>
+          from {{ booking.duration.startDate | date: "shortDate" }} to
+          {{ booking.duration.endDate | date: "shortDate" }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
